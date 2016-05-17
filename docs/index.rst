@@ -186,7 +186,12 @@ If unicode is passed it will be converted to bytes using UTF-8 encoding.
 When deserializing - there's `decode_response` constructor parameter
 present in binary and compact protocols and their factories that controls
 ThriftPy's behavior in this regard. The default `decode_respone` value is
-`True`.  The complete list of field type and `decode_response` value
+`True`.
+
+The JSON protocol always deserializes binary and string fields correctly
+without any additional configuration.
+
+The complete list of field type and `decode_response` value
 combinations is listed here:
 
 string fields
